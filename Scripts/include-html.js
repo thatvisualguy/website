@@ -5,5 +5,5 @@ fetch(file)
 }
 
 document.addEventListener('DOMContentLoaded', function(){
-includeHTML('C:/Users/20034124/Desktop/www/Assets/Common/header_navbar.html', 'header-container');
+includeHTML('Assets/Common/header_navbar.html', 'header-container');
 });
