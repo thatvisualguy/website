@@ -1,0 +1,456 @@
+/*Root files*/
+:root {
+  --bg: #fff;
+  --text: #7288a2;
+  --gray: #4d5974;
+  --lightgray: #e5e5e5;
+  --blue: #d10754;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eeeeee;
+}
+
+header {
+  display: flex;
+  height: 60px;
+  backdrop-filter: blur(21px) saturate(100%);
+  background-color: #00000000;
+  transition: all 0.3s ease-in-out;
+  font-family: "Poppins";
+}
+
+#header-element-left{
+color:#d10754;
+}
+
+
+/*top-blob*/
+.top-blob{
+  transform: scale(0.3);
+}
+
+
+
+/*sidenav*/
+
+.sidenav{
+ left: -225px;
+}
+
+/*Hero section*/
+.hero-section {
+    padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+height: auto;
+}
+
+.hero-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-column{
+  flex: 0.6;
+  overflow: hidden;
+}
+
+.right-column{
+  flex: 0.4;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.hero-bg-text {
+  position: relative;
+  display: flex;
+  font-family: "Poppins";
+  font-size: 28px;
+  text-align: center;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+
+}
+
+.hero-bg-text svg {
+  position: absolute;
+  z-index: -1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transform: scale(1.3);
+}
+
+.hero-bg {
+  background: rgba(238, 238, 238, 0.03);
+  backdrop-filter: blur(50px);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+width: 100%;
+  overflow: hidden;
+}
+
+#hero-img {
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  transform: scale(0.8);
+}
+
+/*About brand section*/
+#about-section {
+  position: relative;
+  display: block;
+  align-item: center;
+  justify-content: center;
+  margin: 15px 25px 15px 25px;
+  font-family: "poppins";
+  height: auto;
+}
+
+#about-icon {
+  display: block;
+  height: inherit;
+}
+
+/*Brand board*/
+
+#brand-board {
+  background-color: #16243d;
+}
+
+#brand-board img {
+  display: flex;
+  width: 100%;
+  height: auto;
+  transform: scale(0.8);
+  border-radius: 25px;
+}
+
+/*button group*/
+.button-group {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+   margin-top: 50px;
+}
+
+.btn-group {
+  margin-top: 20px;
+  left: auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: poppins;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background: #00000000;
+  color: white;
+  border-radius: 2rem;
+  transisiton: all 1s ease-in-out;
+  border: 1px solid rgba(209, 213, 219, 0.4);
+  margin-left: 6px;
+  backdrop-filter: blur(30px) saturate(150%);
+  cursor: pointer;
+}
+
+.btn:hover {
+  backdrop-filter: blur(30px) saturate(220%);
+}
+
+.btn-shadow {
+  position: absolute;
+  background-image: linear-gradient(355deg, rgb(22, 36, 61), rgb(54, 74, 111));
+  border-radius: 2rem;
+  transisiton: all 0.5s ease-in-out;
+  margin-left: 6px;
+  top: 15px;
+  left: -15px;
+  z-index: -1;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn span {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 15px;
+}
+
+#card-subtext {
+  font-size: 12px;
+}
+
+#icon {
+  display: flex;
+  justify-content: center;
+}
+
+.cta {
+  display: flex;
+  position: relative;
+  padding: 15px 15px 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  display: block;
+  border-radius: 28px;
+  background: rgba(209, 7, 84, 0.7);
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+#cta-icon {
+  position: relative;
+  top: 0;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #111;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 125px;
+  background: rgba(209, 7, 84, 1);
+}
+
+.cta:hover span {
+  color: white;
+}
+
+.cta:hover #cta-icon {
+  transform: translateX(0);
+  color: white;
+}
+
+.cta:active {
+  transform: scale(0.96);
+}
+
+/*Mockup-Carousel*/
+.carousel-container {
+  margin-top: 50px;
+  background-color: #16243d;
+}
+
+#mockup-carousel {
+  width: 100%;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  overflow: hidden;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+#mockup-carousel img {
+  object-fit: cover;
+  width: 80%;
+  border-radius: inherit;
+   align-items: center;
+  justify-content: center;
+}
+
+/*FAQs*/
+.container {
+  font-family: "Poppins";
+  margin: 0 auto;
+  padding: 1.1rem;
+  width: 80%;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--lightgray);
+}
+
+.accordion-button {
+  font-family: "Poppins";
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: var(--text);
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+.accordion-button:hover, .accordion-button:focus {
+  cursor: pointer;
+  color: var(--blue);
+}
+
+.accordion-button:hover::after, .accordion-button:focus::after {
+  cursor: pointer;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+.accordion-button[aria-expanded='true'] {
+  color: var(--blue);
+}
+
+.accordion-button[aria-expanded='true'] .icon::after {
+  width: 0;
+}
+
+.accordion-title {
+ padding: 1em 1.5em 1.5em 0;
+}
+  
+
+.accordion-content {
+font-family: "Poppins";
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion-button[aria-expanded='true'] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+}
+
+.accordion-button[aria-expanded='true'] {
+  border-bottom: 1px solid var(--gray);
+}
+
+.accordion-button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: -20px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+.accordion-button .icon::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+
+.accordion-button .icon::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+
+/*Bottom download Links*/
+.w3-display-center{
+  display: none;
+}
+
+#bottom-download-links{
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  font-family: "Poppins";
+}
+
+#bottom-download-links .w3-button:hover span{
+  color: white;
+}
+
+/*Footer*/
+.footer-container{
+  font-family: "poppins";
+  width: 100%; 
+  height: auto; 
+  background-color: #364a6f; 
+  text-align:center;
+  color: #eeeeee;
+}
+
+.footer-text{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+/*Responsiveness*/
+@media only screen and (max-width: 768px) {
+  .button-group {
+    grid-template-columns: repeat(1, 1fr); /* Change to a single column for smaller screens */
+  }
+  .btn {
+    width: 100%; /* Make buttons take up full width */
+    margin-bottom: 15px; /* Add some space between buttons */
+  }
+   .top-blob svg{
+    display: none;
+  }
+  
+  .w3-display-center{
+  display: flex;
+  }
+  
+  .w3-display-right {
+  display: none;
+  }
+}
+
