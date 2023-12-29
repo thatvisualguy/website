@@ -1,47 +1,40 @@
-@import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
-
 :root {
   --bg: #fff;
   --text: #7288a2;
   --gray: #4d5974;
   --lightgray: #e5e5e5;
-  --blue: #03b5d2;
-}
-
-* {
-  box-sizing: border-box;
+  --blue: #d10754;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Hind', sans-serif;
-  background: var(--bg);
-  color: var(--gray);
+  font-family: Arial, sans-serif;
+  padding-top: 60px;
+  background-color: #eeeeee;
+  min-height: 200vh;
   display: flex;
-  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+#header-element-left{
+color: #000000;
 }
 
 .container {
+  font-family: "Poppins";
   margin: 0 auto;
-  padding: 4rem;
-  width: 68rem;
-}
-
-
-:root {
-  --bg: #fff;
-  --text: #7288a2;
-  --gray: #4d5974;
-  --lightgray: #e5e5e5;
-  --blue: #03b5d2;
+  padding: 1.1rem 1.1rem 1.1 rem 0rem;
+  width: 80%;
 }
 
 .accordion-item {
   border-bottom: 1px solid var(--lightgray);
 }
 
-button {
+.accordion-button {
+  font-family: "Poppins";
   position: relative;
   display: block;
   text-align: left;
@@ -54,31 +47,32 @@ button {
   background: none;
   outline: none;
 }
-button:hover, button:focus {
+.accordion-button:hover, .accordion-button:focus {
   cursor: pointer;
   color: var(--blue);
 }
 
-button:hover::after, button:focus::after {
+.accordion-button:hover::after, .accordion-button:focus::after {
   cursor: pointer;
   color: var(--blue);
   border: 1px solid var(--blue);
 }
 
-button[aria-expanded='true'] {
+.accordion-button[aria-expanded='true'] {
   color: var(--blue);
 }
 
-button[aria-expanded='true'] .icon::after {
+.accordion-button[aria-expanded='true'] .icon::after {
   width: 0;
 }
 
 .accordion-title {
- padding: 1em 1.5em 10em 0;
+ padding: 1em 1.5em 1.5em 0;
 }
   
 
 .accordion-content {
+font-family: "Poppins";
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -86,7 +80,7 @@ button[aria-expanded='true'] .icon::after {
   will-change: opacity, max-height;
 }
 
-button[aria-expanded='true'] + .accordion-content {
+.accordion-button[aria-expanded='true'] + .accordion-content {
   opacity: 1;
   max-height: 9em;
   transition: all 200ms linear;
@@ -99,22 +93,22 @@ button[aria-expanded='true'] + .accordion-content {
   margin: 2em 0;
 }
 
-button[aria-expanded='true'] {
-  border-bottom: 1px solid var(--blue);
+.accordion-button[aria-expanded='true'] {
+  border-bottom: 1px solid var(--gray);
 }
 
-button .icon {
+.accordion-button .icon {
   display: inline-block;
   position: absolute;
   top: 18px;
-  right: 0;
+  right: -20px;
   width: 22px;
   height: 22px;
   border: 1px solid;
   border-radius: 22px;
 }
 
-button .icon::before {
+.accordion-button .icon::before {
   display: block;
   position: absolute;
   content: '';
@@ -125,7 +119,7 @@ button .icon::before {
   background: currentColor;
 }
 
-button .icon::after {
+.accordion-button .icon::after {
   display: block;
   position: absolute;
   content: '';
@@ -135,3 +129,50 @@ button .icon::after {
   height: 10px;
   background: currentColor;
 }
+
+/*filter buttons*/
+.w3-bar{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#btn-bar {
+ margin: 0px 54px;
+  transition: margin-left 0.3s ease-in-out;
+ margin-bottom: 20px;
+}
+
+#btn-bar.active {
+  margin-left: 225px;
+}
+
+#btn-bar button{
+  border: 1px solid #000000;    
+  color: black;
+}
+
+.my-button{  
+  display: flex;
+  flex-wrap: wrap;
+  margin: 6px;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0px 0px white;
+  font-family: "poppins";
+   background-color: red;
+
+}
+
+#btn-bar .my-button:hover {
+  box-shadow: 0px 3px #000000;
+  background-color: #d10754 !important;
+  color: white !important;
+}
+
+#btn-bar .my-button:active {
+  transform: translate(0px, 3px);
+  box-shadow: 0px 0px white;
+}
+
+//Responsiveness
+
