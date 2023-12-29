@@ -2,7 +2,7 @@
 function toggleAccordion() {
   const isExpanded = this.getAttribute("aria-expanded") === "true";
 
-  const items = document.querySelectorAll(".accordion-item button");
+  const items = document.querySelectorAll(".accordion-item .accordion-button");
 
   for (const item of items) {
     if (item !== this) {
@@ -14,12 +14,14 @@ function toggleAccordion() {
 }
 
 // Display FAQs
-const fetchDataAndDisplay = async () => {
-  const response = await fetch(
-    "https://raw.githubusercontent.com/thatvisualguy/json_files/main/FAQs.json"
-  );
-  const data = await response.json();
+const fetchData = async () => {
+    const response = await fetch('https://raw.githubusercontent.com/thatvisualguy/json_files/main/FAQs.json');
+    data = await response.json();
+    return data;
+};
 
+
+const fetchDataAndDisplay = (data) =>  {
   const dataContainer = document.getElementById("accordion");
   dataContainer.innerHTML = "";
 
@@ -30,6 +32,7 @@ const fetchDataAndDisplay = async () => {
 
     const questionButton = document.createElement("button");
     questionButton.id = `accordion-button-${index + 1}`;
+    questionButton.className = 'accordion-button';
     questionButton.setAttribute("aria-expanded", "false");
     questionButton.addEventListener("click", toggleAccordion);
 
@@ -61,4 +64,30 @@ const fetchDataAndDisplay = async () => {
   items.forEach((item) => item.addEventListener("click", toggleAccordion));
 };
 
-document.addEventListener("DOMContentLoaded", fetchDataAndDisplay);
+document.addEventListener("DOMContentLoaded", async function () {
+        const data = await fetchData();
+        fetchDataAndDisplay(data);
+});
+
+
+//filter the faqs
+const filterButtons = document.querySelectorAll('#btn-bar button');
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const filter = button.textContent.toLowerCase(); // Assuming button text is the filter
+    filterFaqbyTopic(filter);
+    
+    filterButtons.forEach(b => {
+      b.style.backgroundColor = '';
+      b.style.color = '';
+    });
+    button.style.backgroundColor = '#d10754';
+    button.style.color = 'white';
+  });
+});
+
+const filterFaqbyTopic = (topic) => {
+  const filteredData = data.filter(item => {
+    return item.Topic && item.Topic.toLowerCase() === topic});
+  fetchDataAndDisplay(filteredData);
+};
