@@ -8,9 +8,13 @@ header {
   display: flex;
   height: 60px;
   backdrop-filter: blur(21px) saturate(100%);
-  background-color: #00000000;
+  background-color: #364a6f;
   transition: all 0.3s ease-in-out;
   font-family: "Poppins";
+}
+
+#header-element-left{
+color:#ffffff;
 }
 
 /*header*/
@@ -61,7 +65,7 @@ header {
   background-color: #364a6f;
   position: fixed;
   top: 60px;
-  left: -225px;
+  left: -170px;
   transition: left 0.3s ease-in-out;
   overflow-y: scroll;
   display: relative;
@@ -90,7 +94,7 @@ header {
   text-decoration: none;
   color: #fff;
   font-size: 14px;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Poppins";
 }
 
 .nav-list li a img {
@@ -109,6 +113,7 @@ header {
 /*colored scrollbar*/
 ::-webkit-scrollbar {
   width: 5px;
+ display: none;
 }
 
 /* Track */
@@ -130,4 +135,15 @@ header {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/*responsiveness*/
+@media only screen and (max-width: 768px) {
+  
+	.w3-display-right {
+  		display: none;
+  	}
+ 	.sidenav {
+		left: -225px;
+	}
 }
