@@ -1,0 +1,46 @@
+body {
+  background-color: #eeeeee;
+min-height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Bottom download Links*/
+.w3-display-center{
+  display: none;
+}
+
+#bottom-download-links{
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  font-family: "Poppins";
+}
+
+#bottom-download-links .w3-button:hover span{
+  color: white;
+}
+
+/*Footer*/
+.footer-container{
+  font-family: "poppins";
+  width: 100%; 
+  height: auto; 
+  background-color: #364a6f; 
+  text-align:center;
+  color: #eeeeee;
+  margin-top: 100px;
+}
+
+.footer-text{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/*Responsiveness*/
+@media only screen and (max-width: 768px) {
+  .w3-display-center{
+  display: flex;
+  }
+}
