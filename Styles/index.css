@@ -416,21 +416,6 @@ font-family: "Poppins";
 }
 
 /*Footer*/
-.footer-container{
-  font-family: "poppins";
-  width: 100%; 
-  height: auto; 
-  background-color: #364a6f; 
-  text-align:center;
-  color: #eeeeee;
-}
-
-.footer-text{
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
 
 /*Responsiveness*/
 @media only screen and (max-width: 768px) {
