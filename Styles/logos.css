@@ -169,11 +169,19 @@ header {
   .image-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
   .download-button {
     transform: scale(0.7);
   }
+  
   #w3-container{
   margin-left: 0px;
+  }
+
+  #btn-bar{
+    display: block !important;
+    white-space: nowrap;
+    overflow-x: auto;
   }
 }
 
@@ -181,6 +189,7 @@ header {
   .image-grid {
     grid-template-columns: 1fr;
   }
+  
   .download-button {
     transform: scale(1);
   }
