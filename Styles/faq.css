@@ -138,9 +138,8 @@ font-family: "Poppins";
 }
 
 #btn-bar {
- margin: 0px 54px;
-  transition: margin-left 0.3s ease-in-out;
- margin-bottom: 20px;
+transition: margin-left 0.3s ease-in-out;
+  margin-bottom: 20px;
 }
 
 #btn-bar.active {
