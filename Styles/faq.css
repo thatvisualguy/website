@@ -175,4 +175,10 @@ font-family: "Poppins";
 }
 
 //Responsiveness
-
+@media screen and (max-width: 768px) {
+  #btn-bar{
+    display: block !important;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+}
