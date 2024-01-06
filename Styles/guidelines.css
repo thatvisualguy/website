@@ -108,3 +108,9 @@ margin: auto 50px;
   margin-right: 10px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .w3-container{
+  margin: auto 16px;
+}
+}
