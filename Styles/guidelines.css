@@ -16,6 +16,11 @@ body{
   margin: 20px 0px 0px 0px;
 }
 
+.w3-bar button:hover{
+ background-color: #00000000 !important;
+ color: #000000 !important;
+}
+
 /* values section*/
 .w3-row {
   display: flex;
