@@ -1,0 +1,105 @@
+body{
+  padding-top: 60px;
+  background-color: #eeeee;
+  font-family: 'Heebo';
+}
+
+.w3-bar{
+  display: flex;
+  justify-content: center;
+  color: #b5b5b5;
+  font-family: "Heebo";
+  font-size: 16px;
+}
+
+.w3-bar button{
+  margin: 20px 0px 0px 0px;
+}
+
+/* values section*/
+.w3-row {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Heebo';
+}
+
+.w3-col .m7 .l7 {
+  flex: 1;
+}
+
+.w3-col.m5.l5 {
+  flex: 1;
+}
+
+.w3-container {
+  overflow: hidden;
+margin: auto 50px;
+}
+
+.w3-content {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 100%;
+}
+
+.parastyle {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 100%;
+  object-fit: fill;
+}
+
+.mySlides {
+  position: relative;
+  display: flex;
+  transform: translateX(0%);
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.slideText {
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  text-align: left;
+  align-content: flex-end;
+  transform: translateX(0%);
+  min-width: 100%;
+  min-height: 100%;
+  white-space: normal;
+  transition: transform 0.5s ease-in-out;
+  object-fit: cover;
+}
+
+.slideText p{
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+#prev, #next {
+  cursor: pointer;
+  margin-left: 20px !important;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 2px solid black;
+  color: black;
+  text-align: center;
+}
+
+.demo {
+  position: relative;
+  width: 30px;
+  height: 6px;
+  background-color: gray;
+  border-radius: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
