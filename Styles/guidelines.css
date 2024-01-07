@@ -21,6 +21,12 @@ body {
   color: #000000 !important;
 }
 
+/*Main logo*/
+.mainlogo img{
+  border-radius: 25px;
+  overflow: hidden;
+}
+
 /* values section*/
 .w3-row {
   display: flex;
