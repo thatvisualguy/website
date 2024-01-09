@@ -232,6 +232,8 @@ body {
 /*logo variant*/
 .w3-card-2{
   width: 85%;
+  border-radius: 25px;
+  overflow: hiden;
 }
 
 .logo-variants-header{
