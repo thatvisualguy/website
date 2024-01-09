@@ -22,7 +22,7 @@ body {
 }
 
 /*Main logo*/
-.mainlogo img{
+.mainlogo img {
   border-radius: 25px;
   overflow: hidden;
 }
@@ -31,7 +31,6 @@ body {
 .w3-row {
   display: flex;
   flex-wrap: wrap;
-  
 }
 
 .w3-col .m7 .l7 {
@@ -44,7 +43,7 @@ body {
 
 .w3-container {
   overflow: hidden;
-  margin: auto 50px;
+  margin: auto 0px auto 55px;
 }
 
 .w3-content {
@@ -63,7 +62,8 @@ body {
   object-fit: fill;
 }
 
-.mySlides, .PrimaryBrandmark {
+.mySlides,
+.PrimaryBrandmark {
   position: relative;
   display: flex;
   transform: translateX(0%);
@@ -128,6 +128,12 @@ body {
   border-radius: 25px;
 }
 
+.min-logo-size {
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: white;
+}
+
 #tov-text {
   padding-left: 10px;
   height: 500px;
@@ -136,23 +142,24 @@ body {
 }
 
 /*Primary Brandmark*/
-#primaryBM-row{
+#primaryBM-row {
   display: flex;
   flex-wrap: wrap;
-max-height: 275px;
+  max-height: 275px;
   overflow: hidden;
   background-color: white;
   border-radius: 25px;
+  flex: 1;
 }
 
-#PBm-image-container{
-  border-radius: 25px; 
+#PBm-image-container {
+  border-radius: 25px;
   max-height: inherit;
   padding: 30px !important;
+  flex: 1;
 }
 
-.primaryBM-text{
-  
+.primaryBM-text {
   padding-left: 10px;
   transform: translateX(0%);
   min-width: 100%;
@@ -162,8 +169,8 @@ max-height: 275px;
   object-fit: cover;
 }
 
-.primaryBM-text p{
-  font-family:"Heebo";
+.primaryBM-text p {
+  font-family: "Heebo";
 }
 
 /*bwlogo
@@ -188,13 +195,13 @@ max-height: 275px;
   height: 100%;
 }*/
 
-.bwlogo{
+.bwlogo {
   border-radius: 25px;
   overflow: hidden;
 }
 
-.bwlogo-text{
-  background-color: lightgray; 
+.bwlogo-text {
+  background-color: lightgray;
   padding: 15px;
 }
 .bwlogo-image {
@@ -202,18 +209,54 @@ max-height: 275px;
   transition: all 0.5s ease-in-out;
 }
 
-
 @media screen and (max-width: 768px) {
   .w3-container {
     margin: auto 0px;
   }
   .w3-rectangle {
-    height: 200px !important;
+    height: 300px !important;
   }
   #tov-text {
     height: auto !important;
   }
   #primaryBM-row {
     max-height: 100% !important;
+  }
+  .min-logo-size {
+    max-height: 400px;
+    object-fit: cover;
+  }
+}
+
+
+/*logo variant*/
+.w3-card-2{
+  width: 85%;
+}
+
+.logo-variants-header{
+  text-align: center;
+  font-size: 32px;
+}
+
+.logo-variants-text{
+  text-align: center;
+  height: auto;
+  padding: 3px 0px;
+}
+
+.variant-middler{
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .variant-middler{
+    display: block;
+  }
+  .w3-card-2{
+    width: 95%;
+  }
+  .logo-variants-header{
+    font-size: 18px;
   }
 }
